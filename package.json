@@ -4,7 +4,8 @@
   "description": "pruebas leads formulario",
   "main": "index.js",
   "scripts": {
-    "test": "index.js"
+    "test": "index.js",
+    "start": "node index.js"
   },
   "author": "vrod",
   "license": "ISC",
