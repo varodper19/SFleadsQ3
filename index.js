@@ -1,9 +1,15 @@
 const http = require('http')
 
-const hostname = '127.0.0.1'
-const port = 3000
+
 const express = require("express");
 const app = express();
+const port = process.env.PORT || 3000;
+const production  = 'https://examplePage.com';
+const development = 'http://localhost:3000/';
+const secret = (process.env.NODE_ENV ? production : development);
+const clientID = (process.env.NODE_ENV ? production : development);
+const issuerBaseURL = (process.env.NODE_ENV ? production : development);
+const url = (process.env.NODE_ENV ? production : development);
 
 
 const server = http.createServer( (req, res ) => {
@@ -13,7 +19,7 @@ const server = http.createServer( (req, res ) => {
 })
 
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("Application started and Listening on port 3000");
   });
   

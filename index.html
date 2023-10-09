@@ -10,10 +10,11 @@
     <!--  NOTA: Agregue el siguiente elemento <FORM> a su página.                 -->
     <!--  ----------------------------------------------------------------------  -->
     
-    <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8orgId=00DP0000004ANKj" method="POST">
-    
-    <input type=hidden name="oid" value="00DP0000004ANKj">
-    <input type=hidden name="retURL" value="http://google.com">
+    <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DP0000004ANKj" method="POST">
+
+        <input type=hidden name="oid" value="00DP0000004ANKj">
+        <input type=hidden name="retURL" value="http://google.com">
+        
     
     <!--  ----------------------------------------------------------------------  -->
     <!--  NOTA: Estos campos son elementos de depuración opcionales. Elimine      -->
@@ -36,6 +37,18 @@
     
     <label for="email">Correo electrónico</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
     
+    <label for="estado_candidato">Estado de Candidato:</label>
+    <select id="estado_candidato" name="estado_candidato">
+    <option value="Activo">Abierto</option>
+    <option value="Inactivo">En Gestión</option>
+    <option value="En Proceso">Descartado</option>
+    <option value="En Proceso">Convertido</option>
+
+    </select><br>
+
+    <label for="company">Compañía</label><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>
+
+
     Productos Interesados:<select  id="00NP000000R2fxf" name="00NP000000R2fxf" title="Productos Interesados"><option value="">--Ninguno--</option>
     <option value="Crédito simple PyME">Crédito simple PyME</option>
     <option value="Fondo PyME">Fondo PyME</option>
